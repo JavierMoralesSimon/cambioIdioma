@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contenedor {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <select id="idiomaSelector" onchange="cambiarIdioma()">
+            <option value="es">Español</option>
+            <option value="en">Inglés</option>
+        </select>
+
+        <h1 id="titulo">Bienvenido a Consultoría Bosco</h1>
+        <h2 id="subtitulo">Este es el lugar donde tu negocio empieza a crecer</h2>
+    </div>
+
+    <script>
+        function cambiarIdioma() {
+            const selector = document.getElementById('idiomaSelector');
+            const tituloElemento = document.getElementById('titulo');
+            const subtituloElemento = document.getElementById('subtitulo');
+            const idiomaSeleccionado = selector.value;
+
+            if (idiomaSeleccionado === 'en') {
+                tituloElemento.innerHTML = 'Welcome to Bosco Consulting';
+                subtituloElemento.innerHTML = 'This is the place where your business starts to grow';
+            } else if (idiomaSeleccionado === 'es') {
+                tituloElemento.innerHTML = 'Bienvenido a Consultoría Bosco';
+                subtituloElemento.innerHTML = 'Este es el lugar donde tu negocio empieza a crecer';
+            }
+        }
+    </script>
+
+</body>
+</html>
